@@ -1,3 +1,4 @@
+/*This function draws the grouped bar chart of Food and beverages category*/
 function drawChartA(file1Data, file2Data, file3Data, file4Data) {
     d3.select("#chart").selectAll("svg").remove();
     d3.selectAll(".tooltip").remove();
@@ -100,7 +101,7 @@ function drawChartA(file1Data, file2Data, file3Data, file4Data) {
 
     // Create and append the bars for expenditure
     function barClickHandler(d) {
-
+/*When a bar clicked through this function a new stacked bar chart is shown for a particular company for all the years*/
         loadData().then(([file1Data, file2Data, file3Data, file4Data]) => {
             if (d.letter == 'KRBL') {
                 drawChartA2(file1Data);
