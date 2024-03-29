@@ -1,3 +1,4 @@
+/*This function is used to draw stack bar charts and the line plot*/
 function drawChartA2(file2Data) {
     d3.select("#chart").selectAll("svg").remove();
     d3.selectAll(".tooltip").remove();
