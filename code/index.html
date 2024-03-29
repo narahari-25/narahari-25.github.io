@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Visualization Dashboard</title>
+  <style>
+    /* CSS styles for the button */
+    body {
+      text-align: center; /* Center align text */
+    }
+
+    h1 {
+      margin-top: 50px; /* Add some space from the top */
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: column; /* Align buttons vertically */
+      align-items: center; /* Center align buttons horizontally */
+      margin-top: 20px; /* Add margin for spacing */
+    }
+
+    .total-container {
+      background-color: #f0f0f0; /* Light gray */
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px; /* Add margin from the buttons */
+      width: 500px; /* Set width */
+      margin: auto; /* Center horizontally */
+    }
+
+    #visualizationButton, .videoLinkButton {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 10px; /* Add margin for spacing */
+      cursor: pointer;
+      border-radius: 8px;
+    }
+
+    #visualizationButton:hover, .videoLinkButton:hover {
+      background-color: #45a049; /* Darker green */
+    }
+
+    a {
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+    <div class="total-container">
+  <h1>Data Visualization Dashboard</h1>
+  <h2>Companies Financial Performance</h2>
+  <div class="button-container">
+    <button id="visualizationButton">Visualization</button>
+    <button onclick="window.location.href='#'" class="videoLinkButton">Report</button>
+    <button onclick="window.location.href='#'" class="videoLinkButton">Link to Video</button>
+  </div>
+</div>
+  <script>
+    const visualizationButton = document.getElementById('visualizationButton');
+
+    visualizationButton.addEventListener('click', function() {
+      window.location.href = "home.html"; // Replace with your actual home page path
+    });
+  </script>
+</body>
+</html>
