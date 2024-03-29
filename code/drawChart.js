@@ -1,6 +1,6 @@
 const profitColor = "#82CAFF"
 const expenditureColor = "#4361EE"
-
+/*Main chart showing the average expenditure and profit over the years for eah category of all companies*/
 function drawChart(file1Data, file2Data, file3Data, file4Data, ph1Data, ph2Data, ph3Data, ph4Data, mnm1Data, mnm2Data, mnm3Data, mnm4Data) {
     const margin = { top: 100, right: 0, bottom: 200, left: 400 };
     const width = 900 - margin.left - margin.right;
@@ -139,6 +139,7 @@ function drawChart(file1Data, file2Data, file3Data, file4Data, ph1Data, ph2Data,
 
     // Create and append the bars for expenditure
     function barClickHandler(d) {
+        /*On clicking on a bar through this function it is taken to the corresponing category grouped chart*/
         loadData().then(([file1Data, file2Data, file3Data, file4Data, ph1Data, ph2Data, ph3Data, ph4Data, mnm1Data, mnm2Data, mnm3Data, mnm4Data]) => {
             if (d.letter == 'Food and Beverages') {
                 drawChartA(file1Data, file2Data, file3Data, file4Data);
