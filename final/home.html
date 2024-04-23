@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Performance Metrics</title>
+    <style>
+        /* CSS styles for the heading */
+        body {
+    background-color: rgba(252, 231, 225, 0.945); /* Set background color for the whole window */
+}
+        .fancy-heading {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 30px;
+            color: transparent;
+            /* Start with transparent color */
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-top: 50px;
+            margin-left: 120px;
+            animation: appear 1.5s ease forwards;
+            /* Apply animation */
+        }
+
+        /* Define keyframes for the animation */
+        @keyframes appear {
+            0% {
+                opacity: 0;
+                /* Start with opacity 0 */
+                color: transparent;
+                /* Start with transparent color */
+            }
+
+            100% {
+                opacity: 1;
+                /* End with opacity 1 */
+                color: #333;
+                /* End with desired color */
+            }
+        }
+
+
+        /* CSS styles for the bars */
+        .expenditure {
+            fill: #4361EE;
+        }
+
+        .profit {
+            fill: #82CAFF;
+        }
+
+        .bar:hover {
+            fill: #AAAAAA
+        }
+
+        .tooltip {
+            position: absolute;
+            padding: 10px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .plots-container {
+            display: flex;
+            justify-content: space-around;
+            /* Adjust as needed */
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .line {
+            fill: none;
+            stroke: rgb(70, 145, 180);
+            stroke-width: 2px;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;            
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+
+        #chart-container,
+        #treemap {
+            width: 45%;
+            /* Adjust as needed */
+            height: 800px;
+            /* Adjust as needed */
+        }
+
+        #allchart-container {
+            display: flex; /* Use flexbox */
+        }
+
+        #linechart-container {
+            margin-left: auto; /* Push to the right */
+        }
+         
+
+
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
+</head>
+
+<body>
+    <h1 class="fancy-heading">Financial Performance Metrics</h1>
+    <div id="piechart-container"></div>
+    <div id="allchart-container">
+        <div id="linegraph-container" ></div>
+        <div id="heatmap-container"></div>
+    </div>
+
+    <div class="plots-container">
+        <div id="chart-container"></div>
+        <div id="treemap" ></div>
+        <div id="parallel" style="margin-left: 200px"></div>
+    </div>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="loadData.js" defer></script>
+    <script src="first.js" defer></script>
+    <script src="drawParallelA.js" defer></script>
+    <script src="drawParallelB.js" defer></script>
+    <script src="drawParallelC.js" defer></script>
+    <script src="drawThird.js" defer></script>
+</body>
+
+</html>
